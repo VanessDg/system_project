@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2025 at 05:37 PM
+-- Generation Time: Apr 07, 2025 at 08:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,6 +42,32 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `username`, `password`, `email`, `created_at`) VALUES
 (4, 'admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'admin@example.com', '2025-03-31 13:45:10');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `map_editor`
+--
+
+CREATE TABLE `map_editor` (
+  `id` int(11) NOT NULL,
+  `location_name` varchar(255) DEFAULT NULL,
+  `age` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `latitude` double DEFAULT NULL,
+  `longitude` double DEFAULT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `map_editor`
+--
+
+INSERT INTO `map_editor` (`id`, `location_name`, `age`, `description`, `category`, `latitude`, `longitude`, `image_path`, `created_at`) VALUES
+(1, 'mama mo blue', '1000', '123', 'Historical Site', 15.91115, 120.341492, 'uploads/1744035464_im.jfif', '2025-04-07 14:17:44'),
+(2, 'hotdog', '1000', '1234', 'Monument', 15.867563, 120.238495, 'uploads/1744035490_im.jfif', '2025-04-07 14:18:10');
+
 --
 -- Indexes for dumped tables
 --
@@ -55,6 +81,12 @@ ALTER TABLE `admin`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indexes for table `map_editor`
+--
+ALTER TABLE `map_editor`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -63,6 +95,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `map_editor`
+--
+ALTER TABLE `map_editor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
