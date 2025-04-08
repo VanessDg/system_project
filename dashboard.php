@@ -28,7 +28,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <a href="dashboard.php">Dashboard</a>
             </li>
             <li class="nav-item <?php echo ($currentPage == 'map_editor.php') ? 'active' : ''; ?>">
-                <a href="#map-editor">Map Editor</a>
+                <a href="map_editor.php">Map Editor</a>
             </li>
             <li class="nav-item <?php echo ($currentPage == 'heritage-sites.php') ? 'active' : ''; ?>">
                 <a href="#heritage-sites">Heritage Sites</a>
