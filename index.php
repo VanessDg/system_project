@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+<div class="login-page">
     <div class="wrapper">
         <form method="POST">
             <h2>Admin Login</h2>
@@ -69,5 +70,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Log In</button>
         </form>
     </div>
+</div>
 </body>
 </html>
