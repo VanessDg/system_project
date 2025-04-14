@@ -1,0 +1,85 @@
+.heritage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Each card */
+.heritage-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.heritage-card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Image section */
+.heritage-card img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Info and buttons */
+.heritage-content {
+  flex: 1;
+}
+
+.heritage-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.heritage-content .location {
+  font-style: italic;
+  color: #555;
+  margin: 5px 0;
+}
+
+.heritage-content .desc {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Button group */
+.heritage-actions {
+    display: flex;
+    justify-content: center;   /* Horizontal center */
+    align-items: center;
+    gap: 10px; /* spacing between buttons */
+    margin-top: 10px;
+    height: 100%;
+  }
+  
+  .heritage-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .heritage-actions a:first-child {
+    background-color: #28a745; /* green for edit */
+  }
+  
+  .heritage-actions a:last-child {
+    background-color: #dc3545; /* red for delete */
+  }
+  
